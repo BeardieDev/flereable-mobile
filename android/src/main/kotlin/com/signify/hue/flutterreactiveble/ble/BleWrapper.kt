@@ -17,6 +17,7 @@ data class ScanInfo(val deviceId: String, val name: String, val rssi: Int, val s
         if (serviceUuids != other.serviceUuids) return false
         if (!manufacturerData.contentEquals(other.manufacturerData)) return false
         if (!rawScanRecordData.contentEquals(other.rawScanRecordData)) return false
+
         return true
     }
 

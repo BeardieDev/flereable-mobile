@@ -114,62 +114,19 @@ class ScanForDevicesRequest extends $pb.GeneratedMessage {
 }
 
 class DeviceScanInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeviceScanInfo',
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<GenericFailure>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'failure',
-        subBuilder: GenericFailure.create)
-    ..pc<ServiceDataEntry>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceData',
-        $pb.PbFieldType.PM,
-        protoName: 'serviceData',
-        subBuilder: ServiceDataEntry.create)
-    ..a<$core.int>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'rssi',
-        $pb.PbFieldType.O3)
-    ..a<$core.List<$core.int>>(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'manufacturerData',
-        $pb.PbFieldType.OY,
-        protoName: 'manufacturerData')
-    ..pc<Uuid>(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceUuids',
-        $pb.PbFieldType.PM,
-        protoName: 'serviceUuids', subBuilder: Uuid.create)
-    ..a<$core.List<$core.int>>(
-        8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rawScanRecordData', $pb.PbFieldType.OY,
-        protoName: 'rawScanRecordData')
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DeviceScanInfo', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOM<GenericFailure>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'failure', subBuilder: GenericFailure.create)
+    ..pc<ServiceDataEntry>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'serviceData', $pb.PbFieldType.PM, protoName: 'serviceData', subBuilder: ServiceDataEntry.create)
+    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rssi', $pb.PbFieldType.O3)
+    ..a<$core.List<$core.int>>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'manufacturerData', $pb.PbFieldType.OY, protoName: 'manufacturerData')
+    ..pc<Uuid>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'serviceUuids', $pb.PbFieldType.PM, protoName: 'serviceUuids', subBuilder: Uuid.create)
+    ..a<$core.List<$core.int>>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rawScanRecordData', $pb.PbFieldType.OY, protoName: 'rawScanRecordData')
+    ..hasRequiredFields = false
+  ;
 
   DeviceScanInfo._() : super();
-
   factory DeviceScanInfo({
     $core.String? id,
     $core.String? name,
@@ -301,7 +258,7 @@ class DeviceScanInfo extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(7)
   $core.List<Uuid> get serviceUuids => $_getList(6);
-
+  
   @$pb.TagNumber(8)
   $core.List<$core.int> get rawScanRecordData => $_getN(7);
   @$pb.TagNumber(8)
@@ -310,8 +267,6 @@ class DeviceScanInfo extends $pb.GeneratedMessage {
   $core.bool hasRawScanRecordData() => $_has(7);
   @$pb.TagNumber(8)
   void clearRawScanRecordData() => clearField(8);
-
-
 }
 
 class ConnectToDeviceRequest extends $pb.GeneratedMessage {

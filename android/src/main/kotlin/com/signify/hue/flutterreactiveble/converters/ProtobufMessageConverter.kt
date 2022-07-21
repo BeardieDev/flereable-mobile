@@ -32,21 +32,22 @@ class ProtobufMessageConverter {
     private val uuidConverter = UuidConverter()
 
     fun convertScanInfo(scanInfo: ScanInfo): pb.DeviceScanInfo =
-            pb.DeviceScanInfo.newBuilder()
-                    .setId(scanInfo.deviceId)
-                    .setName(scanInfo.name)
-                    .setRssi(scanInfo.rssi)
-                    .addAllServiceData(createServiceDataEntry(scanInfo.serviceData))
-                    .addAllServiceUuids(createServiceUuids(scanInfo.serviceUuids))
-                    .setManufacturerData(ByteString.copyFrom(scanInfo.manufacturerData))
-                    .setRawScanRecordData(ByteString.copyFrom(scanInfo.rawScanRecordData))
-                    .build()
+        pb.DeviceScanInfo.newBuilder()
+            .setId(scanInfo.deviceId)
+            .setName(scanInfo.name)
+            .setRssi(scanInfo.rssi)
+            .addAllServiceData(createServiceDataEntry(scanInfo.serviceData))
+            .addAllServiceUuids(createServiceUuids(scanInfo.serviceUuids))
+            .setManufacturerData(ByteString.copyFrom(scanInfo.manufacturerData))
+            .setRawScanRecordData(ByteString.copyFrom(scanInfo.rawScanRecordData))
+            .build()
 
     fun convertScanErrorInfo(errorMessage: String?): pb.DeviceScanInfo =
-            pb.DeviceScanInfo.newBuilder()
-                    .setFailure(pb.GenericFailure.newBuilder()
-                            .setCode(ScanErrorType.UNKNOWN.code)
-                            .setMessage(errorMessage ?: "")
+        pb.DeviceScanInfo.newBuilder()
+            .setFailure(
+                pb.GenericFailure.newBuilder()
+                    .setCode(ScanErrorType.UNKNOWN.code)
+                    .setMessage(errorMessage ?: "")
                             .build())
                     .build()
 
