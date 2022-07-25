@@ -14,7 +14,7 @@ dependencies:
   reactive_ble_platform_interface:
     git:
       url: https://github.com/BeardieDev/flereable-platform.git
-      ref: master
+      ref: e3dbffd078832301f56fc6380efb65806bd989ae
 dev_dependencies:
   build_runner: ^2.1.2
   flutter_test:
